@@ -13,7 +13,7 @@ const ProductDetails = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/products/${id}`);
+        const res = await axios.get(`https://product-showcase-j6i0.onrender.com/api/products/${id}`);
         setProduct(res.data.data);
       } catch (err) {
         console.error("Failed to fetch product", err);
@@ -32,7 +32,7 @@ const ProductDetails = () => {
     <div className="product-details-container product-details">
       <div className="product-image">
         <img
-          src={product.image_url ? `http://localhost:3000${product.image_url}` : "https://via.placeholder.com/300"}
+          src={product.image_url ? `https://product-showcase-j6i0.onrender.com${product.image_url}` : "https://via.placeholder.com/300"}
           alt={product.name}
         />
       </div>

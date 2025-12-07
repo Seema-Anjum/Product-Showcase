@@ -40,7 +40,7 @@ const EnquiryForm = ({ productId, onClose }) => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:3000/api/enquiries", {
+      const res = await axios.post("https://product-showcase-j6i0.onrender.com/api/enquiries", {
         product_id: productId,
         name,
         email,

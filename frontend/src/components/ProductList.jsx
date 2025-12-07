@@ -19,7 +19,7 @@ const ProductList = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/products");
+      const res = await axios.get("https://product-showcase-j6i0.onrender.com/api/products");
       setProducts(res.data.data || []);
       setFiltered(res.data.data || []);
     } catch (err) {
@@ -87,7 +87,7 @@ const ProductList = () => {
             <img
               src={
                 p.image_url ||
-              `http://localhost:3000/${p.image_url}`
+              `https://product-showcase-j6i0.onrender.com/${p.image_url}`
               }
               alt={p.name}
             />
